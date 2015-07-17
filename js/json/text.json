@@ -1,0 +1,11 @@
+{"text":[
+    {"index":"", "title":"Ride With Me", "text":"Fusce nisi leo, tempus vitae ex quis, rutrum efficitur nunc. Nunc quis ex a elit ornare consequat. Etiam euismod, neque eget molestie ornare, lacus augue eleifend libero, et efficitur dolor lacus eget eros. Proin in dui viverra, elementum nunc faucibus, feugiat erat. Duis posuere ligula in convallis rhoncus. Duis ultricies vel neque id imperdiet. Ut eget molestie magna."},
+    {"index":"", "title":"About us", "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus risus, tincidunt ut porta nec, gravida non nibh. Ut viverra diam laoreet sapien ultricies, non ultricies ipsum interdum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla enim velit, sodales eu congue ac, semper nec ante. Aenean vel leo nec quam aliquet volutpat. Morbi rutrum sem et faucibus suscipit. Suspendisse potenti."},
+    {"index":"", "title":"How does it work?", "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus risus, tincidunt ut porta nec, gravida non nibh. Ut viverra diam laoreet sapien ultricies, non ultricies ipsum interdum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."},
+    {"index":"", "title":"Gallery", "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus risus, tincidunt ut porta nec, gravida non nibh. Ut viverra diam laoreet sapien ultricies, non ultricies ipsum interdum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."}
+]}, 
+{"gallery":[
+	{"url":"images/city-skyline-599801_1920.jpg","caption":"Lorem ipsum"}
+	{"url":"images/EAXBJLXV4R.jpg","caption":"Lorem ipsum"},
+	{"url":"images/W11Y1VS4CT.jpg","caption":"Lorem ipsum"}	
+]}

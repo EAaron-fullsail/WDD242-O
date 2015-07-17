@@ -7,20 +7,42 @@
   <title>ride with me</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
-
+  <link href='http://fonts.googleapis.com/css?family=Fjalla+One&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Hind&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
-	<script src="js/jquery.js"></script>
-	<script type="text/javascript">
+
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
 	$( document ).ready(function() {
 	   	var tabs = $(".tabs-container");
+
+
+
+	   	function getInfo(b){
+
+			$.getJSON( "js/json/text.json", function( data ) {
+			
+			
+			}).done(function( json ) {
+				console.log( "is finished");
+			}).fail(function( jqxhr, textStatus, error ) {
+				var err = textStatus + ", " + error;
+				console.log( "Request Failed: " + err );
+			});
+		}
+
+		function getPhotos(b){
+
+		}
+
 		tabs.each(function(){
 		var $this 	= $(this),
 			$tab 	= $this.find('a'),
 			$panel 	= $($tab.attr('href'));
 
 			$this.on('click', '.tab-cont', function(e){
-				//e.preventDefault();
+				e.preventDefault();
 				var $link = $(this);
 				var id   = this.hash;
 				if(id && !$link.is('.active')){
@@ -28,10 +50,20 @@
 					$tab.removeClass('active');
 					$panel = $(id).addClass('act');
 				}
+				
+				if(id=="#gallery"){
+					getInfo(id);
+					getPhotos(id);
+				}
+				else{
+					getInfo(id);
+				}
+					
+				
 			});
 		});
 	});
-	</script>
+</script>
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -41,15 +73,15 @@
 
 	<header>
 
-		<h1 id="logo">Ride With me</h1>
+		<h1 id="logo">Ride With Me</h1>
 
 		<nav>
 
 	       	<ul class="tabs-container">
 				<li><a href="#home" class="tab-cont active">home</a></li>
-				<li><a href="#about" class="tab-cont ">about</a></li>
-				<li><a href="#howto" class="tab-cont ">how to</a></li>
-				<li><a href="#gallery" class="tab-cont ">attractions</a></li>
+				<li><a href="#about" class="tab-cont">about</a></li>
+				<li><a href="#howto" class="tab-cont">how to</a></li>
+				<li><a href="#gallery" class="tab-cont">gallery</a></li>
 				<!-- <a href="#" class="tab-cont "><li>order</li></a> -->
 			</ul>
 		</nav>
@@ -59,56 +91,60 @@
 		<!-- section for main greeting  -->
 		<section class="tabbed-panel act" id="home">
 			<h2>Ride With Me</h2>
-			<p> Fusce nisi leo, tempus vitae ex quis, rutrum efficitur nunc. Nunc quis ex a elit ornare consequat. Etiam euismod, neque eget molestie ornare, lacus augue eleifend libero, et efficitur dolor lacus eget eros. Proin in dui viverra, elementum nunc faucibus, feugiat erat. Duis posuere ligula in convallis rhoncus. Duis ultricies vel neque id imperdiet. Ut eget molestie magna./p>
+			<p>Lorem Ipusm</p>
 		</section>
 	
 		<!-- section for about -->
 		<section class="tabbed-panel" id="about">
 			<h2>About us</h2>
-
-		<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus risus, tincidunt ut porta nec, gravida non nibh. Ut viverra diam laoreet sapien ultricies, non ultricies ipsum interdum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla enim velit, sodales eu congue ac, semper nec ante. Aenean vel leo nec quam aliquet volutpat. Morbi rutrum sem et faucibus suscipit. Suspendisse potenti.</p>
-			
-
+			<p>Lorem Ipusm</p>
 		</section>
 
 		<section class="tabbed-panel" id="howto">
 			<h2>How does it work?</h2>
-			<q> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus risus, tincidunt ut porta nec, gravida non nibh. Ut viverra diam laoreet sapien ultricies, non ultricies ipsum interdum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</q>
-			<aside>
-				<h3>How to sign up</h3>
-				<ol>
-					<li><strong>Click on the order tab</strong></li>
-					<li><strong>Fill out the form</strong></li>
-					<li><strong>Click submit</strong></li>
-				</ol>
-			</aside>
-			
-
+			<p>Lorem Ipusm</p>
 		</section>
 
 		<!-- section for main gallery  -->
 		<section class="tabbed-panel " id="gallery">
 			<h2>Gallery</h2>
-			<a href="images/city-skyline-599801_1920.jpg"><figure>
-			<img src="images/city-skyline-599801_1920.jpg" alt="lorem" width="304" height="228">
-			<figcaption>lorem ipsum</figcaption>
-			</figure></a> 
-			<a href="images/EAXBJLXV4R.jpg"><figure>
-			<img src="images/EAXBJLXV4R.jpg" alt="lorem" width="304" height="228">
-			<figcaption>lorem ipsum</figcaption>
-			</figure></a> 
-			<a href="images/W11Y1VS4CT.jpg"><figure>
-			<img src="images/W11Y1VS4CT.jpg" alt="lorem" width="304" height="228">
-			<figcaption>lorem ipsum</figcaption>
-			</figure></a> 
+			<p>Lorem Ipusm</p>
 		</section>
 
-		<!-- section for main section for form  -->
-   <!-- <section class="tabbed-panel views act" id="">
+		<div class="wrapper">
+
+			<div class="main-content">
+			<h2 id="content-title">About us</h2>
+
+			<p id="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus risus, tincidunt ut porta nec, gravida non nibh. Ut viverra diam laoreet sapien ultricies, non ultricies ipsum interdum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+
+			<q>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed metus risus.</q>
+
+			<div class="galleryImages">
+
+				<a href="#images/city-skyline-599801_1920.jpg"><figure>
+				<img src="images/city-skyline-599801_1920.jpg" alt="lorem" width="304" height="228">
+				<figcaption>Lorem ipsum</figcaption>
+				</figure></a> 
+				<a href="#images/city-skyline-599801_1920.jpg"><figure>
+				<img src="images/city-skyline-599801_1920.jpg" alt="lorem" width="304" height="228">
+				<figcaption>Lorem ipsum</figcaption>
+				</figure></a> 
+
+			</div>
 
 
-		</section> -->
-
+			</div>
+			<aside>
+				<h3>Catch A ride </h3>
+				<ol>
+					<li><strong>Click on the order tab</strong></li>
+					<li><strong>Fill out the form</strong></li>
+					<li><strong>Click submit</strong></li>
+				</ol>
+					<button>Order now</button>
+			</aside>
+		</div>
 	<footer>
 		<!-- Social media icons -->
 	</footer>
