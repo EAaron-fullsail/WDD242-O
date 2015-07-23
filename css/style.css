@@ -13,6 +13,7 @@ body{
 	background-image:url(../images/K4MS85VPUV.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center top;
 }
 a:link{
 	text-decoration: none;
@@ -72,6 +73,7 @@ header nav ul li a:link{
 	width:100%;
 	height:500px;
 	background-color:#fff;
+	overflow: hidden;
 
 }
 .main-content{
@@ -82,12 +84,22 @@ header nav ul li a:link{
 
 .main-content p{
 	font-size: 12px;
+	line-height: 20px;
 }
 aside{
 	float:right;
 	width:20%;
-		padding: 3.5%;
-		text-align: center;
+	height: 100%;
+	padding: 3.5%;
+	text-align: center;
+	clear:right;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,f6f6f6+47,ededed+100;White+3D+%231 */
+	background: rgb(255,255,255); /* Old browsers */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* W3C */
+
+}
+aside h3{
+	margin-top: 0;
 }
 
 aside ol{
@@ -135,6 +147,7 @@ aside button:hover{
 	color:#fff;
 	font-size:16px;
 	text-shadow: 1px 0px #a0a0a0;
+	font-style: italic;
 
 }
 .act{
@@ -149,7 +162,7 @@ aside button:hover{
 	width: 45%;
 	float: left;
 	margin:0;
-	padding:10px;
+	padding:1.75%;
 	background-color: #d0d0d0;
 	margin-left: 1%;
 }
@@ -163,4 +176,7 @@ footer{
 	width: 100%;
 	height:200px;
 	box-shadow: 0 2px 10px 0px #ababab inset;
+	background-image:url(../images/ios-linen.jpg);
+	background-repeat: repeat-x;
+	background-position: left;
 }
